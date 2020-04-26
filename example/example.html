@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formValidator</title>
+</head>
+
+<body>
+  <!-- 通过标签形式引入 -->
+  <script src="../release/form-validator.js"></script>
+  <script>
+    let Validator = window.Validator
+    // 创建 v 实例，type类型默认为 "string"
+    let v = new Validator({
+      num: {
+        type: "number",
+        isEmpty: true,
+        max: 23
+      },
+      sex: {
+        required: true
+      }
+    })
+    // 使用 valitate 校验函数
+    v.validate({
+      num: 24,
+      sex: "男"
+    })
+      .then(promises => {
+        console.log(promises)
+        promises.map(element => {
+          !element.message && alert(element.errorMessage)
+        });
+      })
+      .catch(e => console.log(e))
+  </script>
+</body>
+
+</html>

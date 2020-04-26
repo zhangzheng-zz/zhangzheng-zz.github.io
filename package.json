@@ -1,0 +1,22 @@
+{
+  "name": "form-validator",
+  "version": "0.0.1",
+  "description": "一个简单的表单校验器，用于对前端表单的字段验证",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "form",
+    "validator",
+    "validate"
+  ],
+  "author": "zhangzheng",
+  "license": "MIT",
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.3.6",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
